@@ -5,16 +5,16 @@
 
 #######################################################################################
 # Book settings
-title                       : MyBook Lab Manual # The title of the book. Will be placed in the left navbar.
-author                      : Jonathan Appavoo  # The author of the book
-copyright                   : "2021"  # Copyright year to be placed in the footer
+title                       : Test Book Lab Manual # The title of the book. Will be placed in the left navbar.
+author                      : Red Hat  # The author of the book
+copyright                   : "2022"  # Copyright year to be placed in the footer
 logo                        : logo.png  # A path to the book logo
 only_build_toc_files        : true
 
 repository:
-  url: https://github.com/jappavoo/UndertheCovers
-  path_to_book: underthecovers
-  branch: main
+  url: https://github.com/xwshiba/ope
+  path_to_book: content
+  branch: test-book
 
 html:
   use_repository_button: true

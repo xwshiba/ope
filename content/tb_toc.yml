@@ -1,17 +1,11 @@
 format: jb-book
 root: intro_tb
 parts:
-- caption: 'Part 1'
+- caption: 'Special Displays'
   numbered: true
   chapters:
-  - file: part1/ch1
-- caption: 'Part 2'
+  - file: 01_special_displays/special_displays
+- caption: 'Animation Examples'
   numbered: true
   chapters:
-  - file: part2/ch1
-  - file: part2/ch2
-- caption: 'Part 3'
-  numbered: true
-  chapters:
-  - file: part3/ch1
-  - file: part3/ch2
+  - file: 03_animations_examples/animations

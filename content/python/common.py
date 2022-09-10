@@ -273,7 +273,7 @@ def displayBytes(bytes=[[0x00]],
     # there is probably a better way to do this
     #if not labels:
     #    labels = ["" for i in range(len(bytes))]
-    
+
 #    print(bytes, bytes[0], np.dtype(bytes[0], dtype(bytes[0]).nbytes))
     sizeinbits = dtype(0).nbytes
     sizeinbits = sizeinbits * 8
@@ -620,7 +620,7 @@ def closeTtySession(session):
 def closeAllOpenTtySessions():
     for s in TtyOpenSessions:
         closeTtySession(s)
-        
+
 def openTtySession(cmd, cwd, rows, cols):
     global TtySessions
     session = dict()
@@ -668,7 +668,7 @@ def renderTtySessionOutput(output, height='100%', width='', outputlayout={'borde
 def bashSessionSendEOF(session):
     master = session['master']
     os.write(master, b'\x04')
-    
+
 def bashSessionRawWrite(data, session,  
                         batchsize=1, 
                         interbatchdelayms=140, 
@@ -755,7 +755,7 @@ def bashSessionRawWrite(data, session,
         
     # output = b'$ ' + output
     return output,session
-    
+
 #def cleanTermBytes(bytes):    
 #    return  ansi_escape_8bit.sub(b'', bytes)
 def bashSessionCmds(cmds, cwd=os.getcwd(), bufsize=4096, wait=True, rows=20, cols=80, session=None, close=True, ignoreoutput=False,  **kwargs):
@@ -849,7 +849,7 @@ def bashSessionClose(session):
 def bashSessionOpen(cwd=os.getenv('HOME'), **kwargs):
     _, session = bashSessionCmds(cmds=[], close=False, cwd=cwd, **kwargs)
     return session
-    
+
 def bashCmds(cmds, cwd=os.getenv('HOME'), **kwargs):
     output, session = bashSessionCmds(cmds=cmds, cwd=cwd, **kwargs)
     return renderTtySessionOutput(output, **kwargs)
@@ -899,8 +899,8 @@ class BashSession:
         
     def getPid(self):
         return self.session['process'].pid
-    
-    
+
+
 # FIXME: JA Given the new Session code above this needs to be re thought out and cleaned up or removed
 def runTermCmd(cmd, cwd=os.getcwd(), bufsize=4096, wait=True, tmout=1.0, rows=20, cols=80):
     master, slave = pty.openpty()

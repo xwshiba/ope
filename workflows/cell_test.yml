@@ -1,0 +1,46 @@
+# Cell Test for Test Book
+# Relies on Jupyter Book build tools to test the book
+# Make sure the review the Log for warnings or errors
+
+name: cell-test
+
+# run on every push
+on:
+  push:
+    branches: [test-book]
+
+# This job installs dependencies, check the cells, and clean the built files 
+jobs:
+  cell-test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    # Install dependencies
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+        
+    - name: Build check the textbook
+      run: |
+        make build
+    
+    # upload error logs if there is any
+    - uses: actions/upload-artifact@v3
+      with:
+        name: ERROR_LOGS
+        path: |
+          textbook/_build/html/reports/
+          lecturenotes/_build/html/reports/
+          labmanual/_build/html/reports/
+        if-no-files-found: warn # 'warn' or 'ignore' are also available, defaults to `warn`
+    
+    # clean build files
+    - name: Clean build files
+      run: |
+        make clean

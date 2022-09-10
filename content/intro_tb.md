@@ -1,14 +1,9 @@
 <!-- #region -->
-Book Title 
+Test Book 
 =====================================
 
-In this book we will teach something fun
-- fun thing one
-- fun thing 2
+Test Book contains some special notebook cells that Open Education Project supports.
 
-The material is broken down in to three parts: 
-1. Part 1 
-2. Part 2
-3. Part 3
+General cell tests are supported by [Jupyter Book](https://jupyterbook.org/en/stable/intro.html).
 
 <!-- #endregion -->
