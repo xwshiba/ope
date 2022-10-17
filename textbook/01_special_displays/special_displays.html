@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Special Displays &#8212; Test Book</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Animation Examples" href="../03_animations_examples/animations.html" />
+    <link rel="prev" title="Test Book" href="../intro_tb.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Test Book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro_tb.html">
+                    Test Book
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Special Displays
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Special Displays
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Animation Examples
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../03_animations_examples/animations.html">
+   2. Animation Examples
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://jupyterhub-opf-jupyterhub.apps.smaug.na.operate-first.cloud/hub/user-redirect/git-pull?repo=https%3A//github.com/xwshiba/ope&urlpath=lab/tree/ope/content/01_special_displays/special_displays.ipynb&branch=test-book"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on JupyterHub"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_jupyterhub.svg">
+  </span>
+<span class="headerbtn__text-container">JupyterHub</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/xwshiba/ope"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/xwshiba/ope/issues/new?title=Issue%20on%20page%20%2F01_special_displays/special_displays.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/xwshiba/ope/edit/test-book/content/01_special_displays/special_displays.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/01_special_displays/special_displays.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-sample-image-that-use-customized-styles">
+   1.1. 1 - A sample image that use customized styles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-string-in-customized-styles">
+   1.2. 2 - Display String in customized styles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-terminal-shell-command-results">
+   1.3. 3 - Display terminal shell command results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-bash-command-in-customized-styles">
+   1.4. 4 - Display bash command in customized styles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-html-and-css-to-customize-styles">
+   1.5. 5 - Use HTML and CSS to customize styles
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Special Displays</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-sample-image-that-use-customized-styles">
+   1.1. 1 - A sample image that use customized styles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-string-in-customized-styles">
+   1.2. 2 - Display String in customized styles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-terminal-shell-command-results">
+   1.3. 3 - Display terminal shell command results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#display-bash-command-in-customized-styles">
+   1.4. 4 - Display bash command in customized styles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#use-html-and-css-to-customize-styles">
+   1.5. 5 - Use HTML and CSS to customize styles
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="special-displays">
+<h1><span class="section-number">1. </span>Special Displays<a class="headerlink" href="#special-displays" title="Permalink to this headline">#</a></h1>
+<p>In this part of this book we will cover some cells that have special displays.</p>
+<p>All the content are <strong>static</strong> in this chapter.</p>
+<hr><p>List:</p>
+<ul class="simple">
+<li><p>1 - A sample image that use customized styles</p></li>
+<li><p>2 - Display String in customized styles</p></li>
+<li><p>3 - Display terminal shell command results</p></li>
+<li><p>4 - Display bash command in customized styles</p></li>
+<li><p>5 - Use HTML and CSS to customize styles</p></li>
+</ul>
+<hr><section id="a-sample-image-that-use-customized-styles">
+<h2><span class="section-number">1.1. </span>1 - A sample image that use customized styles<a class="headerlink" href="#a-sample-image-that-use-customized-styles" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<!-- produced by: 
+htmlFig("[{'src': '../images/sample-image.jpg'}]", 
+        id="fig:vnm", 
+        align="left", 
+        width="100%",
+        margin="auto 3em 0 auto",
+        caption="Figure: A Sample Image that use special style", 
+        captionalign="left")
+-->
+<table id="fig:vnm" align="left" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse; margin: auto 3em 0 auto">
+    <tr style="padding: 0; margin: 0;"> 
+        <td colspan="1" width="100%" style="padding: 0; margin: 0 0 0 0; background-color:inherit;">
+            <div style="padding: 0; margin: 0 0 0 0;">
+              <figure style="padding: 0; margin: 0 0 0 0; width:100%;">
+                   <img src="../images/sample-image.jpg" width="100%" style="padding: 0; margin: 0;">
+                </figure>
+            </div>
+        </td>
+    </tr>
+    <caption align="bottom" style="text-align: left; padding: 0; margin: 0;" >
+          <i>Figure: A Sample Image that use special style</i> 
+    </caption>
+</table>
+</div>
+</div>
+<hr></section>
+<section id="display-string-in-customized-styles">
+<h2><span class="section-number">1.2. </span>2 - Display String in customized styles<a class="headerlink" href="#display-string-in-customized-styles" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div style="font-size: 4em;" align="center">
+0b10101110 = 0xAE
+</div></div>
+</div>
+<hr></section>
+<section id="display-terminal-shell-command-results">
+<h2><span class="section-number">1.3. </span>3 - Display terminal shell command results<a class="headerlink" href="#display-terminal-shell-command-results" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "8866c001510c4ee9b34197d380ff4d54", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+<hr></section>
+<section id="display-bash-command-in-customized-styles">
+<h2><span class="section-number">1.4. </span>4 - Display bash command in customized styles<a class="headerlink" href="#display-bash-command-in-customized-styles" title="Permalink to this headline">#</a></h2>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "123977db0f634e9ca9b494d319493fde", "version_major": 2, "version_minor": 0}
+</script></div>
+</div>
+<hr></section>
+<section id="use-html-and-css-to-customize-styles">
+<h2><span class="section-number">1.5. </span>5 - Use HTML and CSS to customize styles<a class="headerlink" href="#use-html-and-css-to-customize-styles" title="Permalink to this headline">#</a></h2>
+<p>This is the example of image overlapping with backgrounds.</p>
+<blockquote>
+<div><p><a class="reference internal" href="../_images/Product_icon-Red_Hat-Runtimes-RGB.png"><img alt="../_images/Product_icon-Red_Hat-Runtimes-RGB.png" class="align-left" src="../_images/Product_icon-Red_Hat-Runtimes-RGB.png" style="width: 60px;" /></a> <p style="background-color:powderblue;">
+<em>This is some sample texts.</em>: This is some sample texts.This is some sample texts.This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts. This is some sample texts.
+<a class="reference internal" href="../_images/Product_icon-Red_Hat-Runtimes-RGB.png"><img alt="../_images/Product_icon-Red_Hat-Runtimes-RGB.png" class="align-right" src="../_images/Product_icon-Red_Hat-Runtimes-RGB.png" style="width: 60px;" /></a></p>
+</div></blockquote>
+</p></section>
+</section>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"123977db0f634e9ca9b494d319493fde": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_e6c5e844394d461d8e70297ee9da9358", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "$ help\r\nGNU bash, version 5.0.17(1)-release (x86_64-pc-linux-gnu)\r\nThese shell commands are defined internally.  Type `help' to see this list.\r\nType `help name' to find out more about the function `name'.\r\nUse `info bash' to find out more about the shell in general.\r\nUse `man -k' or `info' to find out more about commands not in this list.\r\n\r\nA star (*) next to a name means that the command is disabled.\r\n\r\n job_spec [&]                            history [-c] [-d offset] [n] or hist>\r\n (( expression ))                        if COMMANDS; then COMMANDS; [ elif C>\r\n . filename [arguments]                  jobs [-lnprs] [jobspec ...] or jobs >\r\n :                                       kill [-s sigspec | -n signum | -sigs>\r\n [ arg... ]                              let arg [arg ...]\r\n [[ expression ]]                        local [option] name[=value] ...\r\n alias [-p] [name[=value] ... ]          logout [n]\r\n bg [job_spec ...]                       mapfile [-d delim] [-n count] [-O or>\r\n bind [-lpsvPSVX] [-m keymap] [-f file>  popd [-n] [+N | -N]\r\n break [n]                               printf [-v var] format [arguments]\r\n builtin [shell-builtin [arg ...]]       pushd [-n] [+N | -N | dir]\r\n caller [expr]                           pwd [-LP]\r\n case WORD in [PATTERN [| PATTERN]...)>  read [-ers] [-a array] [-d delim] [->\r\n cd [-L|[-P [-e]] [-@]] [dir]            readarray [-d delim] [-n count] [-O >\r\n command [-pVv] command [arg ...]        readonly [-aAf] [name[=value] ...] o>\r\n compgen [-abcdefgjksuv] [-o option] [>  return [n]\r\n complete [-abcdefgjksuv] [-pr] [-DEI]>  select NAME [in WORDS ... ;] do COMM>\r\n compopt [-o|+o option] [-DEI] [name .>  set [-abefhkmnptuvxBCHP] [-o option->\r\n continue [n]                            shift [n]\r\n coproc [NAME] command [redirections]    shopt [-pqsu] [-o] [optname ...]\r\n declare [-aAfFgilnrtux] [-p] [name[=v>  source filename [arguments]\r\n dirs [-clpv] [+N] [-N]                  suspend [-f]\r\n disown [-h] [-ar] [jobspec ... | pid >  test [expr]\r\n echo [-neE] [arg ...]                   time [-p] pipeline\r\n enable [-a] [-dnps] [-f filename] [na>  times\r\n eval [arg ...]                          trap [-lp] [[arg] signal_spec ...]\r\n exec [-cl] [-a name] [command [argume>  true\r\n exit [n]                                type [-afptP] name [name ...]\r\n export [-fn] [name[=value] ...] or ex>  typeset [-aAfFgilnrtux] [-p] name[=v>\r\n false                                   ulimit [-SHabcdefiklmnpqrstuvxPT] [l>\r\n fc [-e ename] [-lnr] [first] [last] o>  umask [-p] [-S] [mode]\r\n fg [job_spec]                           unalias [-a] name [name ...]\r\n for NAME [in WORDS ... ] ; do COMMAND>  unset [-f] [-v] [-n] [name ...]\r\n for (( exp1; exp2; exp3 )); do COMMAN>  until COMMANDS; do COMMANDS; done\r\n function name { COMMANDS ; } or name >  variables - Names and meanings of so>\r\n getopts optstring name [arg]            wait [-fn] [id ...]\r\n hash [-lr] [-p pathname] [-dt] [name >  while COMMANDS; do COMMANDS; done\r\n help [-dms] [pattern ...]               { COMMANDS ; }\r\n$ "}]}}, "8866c001510c4ee9b34197d380ff4d54": {"model_module": "@jupyter-widgets/output", "model_module_version": "1.0.0", "model_name": "OutputModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/output", "_model_module_version": "1.0.0", "_model_name": "OutputModel", "_view_count": null, "_view_module": "@jupyter-widgets/output", "_view_module_version": "1.0.0", "_view_name": "OutputView", "layout": "IPY_MODEL_c032625a4b644ce484ca14f9f6c85fff", "msg_id": "", "outputs": [{"name": "stdout", "output_type": "stream", "text": "$ hello\nbash: hello: command not found\r\n$ "}]}}, "c032625a4b644ce484ca14f9f6c85fff": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "100%", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "e6c5e844394d461d8e70297ee9da9358": {"model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": "1px solid black", "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": "10em", "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": "scroll", "padding": null, "right": null, "top": null, "visibility": null, "width": null}}}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./01_special_displays"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../intro_tb.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Test Book</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../03_animations_examples/animations.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Animation Examples</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Red Hat<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
