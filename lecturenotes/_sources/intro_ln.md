@@ -1,10 +1,6 @@
 Lecture Notes / Slides
 ==============================================
 
-This the lecture notes for the associated test book.
+Test Book lecture notes contains some special OPE RISE slides layouts that Open Education Project supports.
 
-Lecture Notes currently contains all available slide templates with speaker notes.
-
-The example slide deck is copied from the [slide deck repo](https://github.com/YiqinZhang/OPE-RISE/blob/main/demo). 
-
-Please make sure to sync with the source.
+General cell tests are supported by [Jupyter Book](https://jupyterbook.org/en/stable/intro.html). 
