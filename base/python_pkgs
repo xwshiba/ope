@@ -1,0 +1,14 @@
+nbstripout 
+jupyter-book 
+ghp-import
+jupytext 
+widgetsnbextension 
+matplotlib
+pandas 
+jupyter_contrib_nbextensions 
+ipydrawio 
+ipydrawio-export 
+jupyterlab-myst 
+jupyterlab-spellchecker
+nbconvert
+jupyterlab-git
